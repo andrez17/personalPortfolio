@@ -79,7 +79,7 @@ video {
 }
 
 .banner {
-    background-color: brown;
+    background-color: rgb(223, 60, 60);
     grid-column: 2 / span 2;
     grid-row: 2 / span 1;
     display: flex;
@@ -127,11 +127,17 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .weather h2{
     position: relative;
     margin: 10px;
-    bottom: 200px;
+    bottom: 180px;
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 0.78;
+    /* text-align: left; */
+    color: #4a4a4a;
 }
 
 .weather .cityForm{
@@ -144,6 +150,19 @@ img {
     position: relative;
     margin: 20px;
 }
+
+.container {
+    /* visibility: hidden; */
+}
+
+#destination {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    text-align: left;
+    color: #27b7c1;
+  }
 
 main {
      background-color: rgb(29, 29, 29);

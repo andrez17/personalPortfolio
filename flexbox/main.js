@@ -12,3 +12,53 @@ const $input = $('#city');
 const $submit = $('#button');
 const $destination = $('#destination');
 const $container = $('.container');
+const $weatherDiv = $("#weather1");
+const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+// Ajax Functions
+const getForecast = async() => {
+    const urlToFetch = `${weatherUrl}?&q=${$input.val()}&APPID=${openWeatherKey}`;
+    try{
+        const response = await fetch(urlToFetch);
+        if(response.ok){
+            const jsonResponse = response.json();
+            return jsonResponse;
+        }
+    }catch(error){
+
+    }
+}
+
+const kelvinToFahrenheit = k => ((k - 273.15) * 9 / 5 + 32).toFixed(0);
+
+const createWeatherHTML = (currentDay) => {
+    return `<h2>${weekDays[(new Date()).getDay()]}</h2>
+    <h2>Temperature: ${kelvinToFahrenheit(currentDay.main.temp)}&deg;F</h2>
+    <h2>Condition: ${currentDay.weather[0].description}</h2>
+    <img src="https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png">`;
+}
+
+
+
+const renderForecast = (day) =>{
+    let weatherContent = createWeatherHTML(day);
+    $weatherDiv.append(weatherContent);
+}
+
+const executeSearch = () => {
+    // $venueDivs.forEach(venue => venue.empty());
+    $weatherDiv.empty();
+    $destination.empty();
+    $container.css("visibility", "visible");
+    // getVenues()
+    // .then(venues =>{
+    //   renderVenues(venues);
+    // })
+    getForecast()
+    .then(forecast =>{
+      renderForecast(forecast);
+    })
+    return false;
+  }
+  
+  $submit.click(executeSearch)
