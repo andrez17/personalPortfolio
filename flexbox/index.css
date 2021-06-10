@@ -148,6 +148,11 @@ img {
     width: 300px;
     height:  30px;
     border: #ffffff 2.5px solid;
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    text-align: left;
 }
 
 #button{
@@ -156,6 +161,12 @@ img {
     background-color: cadetblue;
     border: none;
     border-radius: 2px;
+    font-size: 1.5em;
+    font-family: Source Sans Pro;
+    font-weight: 600;
+    line-height: 0.94;
+    letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .container {
