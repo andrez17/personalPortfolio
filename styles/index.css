@@ -265,7 +265,7 @@ footer img{
     body {
         display: grid;
         height: 100vh;
-        grid-template: 10% 20% 140% 140% 200% 10% / repeat(3, 1fr);
+        grid-template: 10% 20% 140% 140% 220% 10% / repeat(3, 1fr);
         /* grid-gap: 10px; */
     }
     .navbar h1{
