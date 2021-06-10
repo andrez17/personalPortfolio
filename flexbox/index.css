@@ -6,7 +6,7 @@
 body {
     display: grid;
     height: 100vh;
-    grid-template: 10% 20% 70% 70% 100% 10% / repeat(3, 1fr);
+    grid-template: 10% 20% 70% 90% 120% 10% / repeat(3, 1fr);
     /* grid-gap: 10px; */
 }
 
@@ -100,13 +100,6 @@ section {
     width: 100%;
 }
 
-/* .contact-flex{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .techstack-flex {
     width: 100%;
     display: flex;
@@ -129,12 +122,12 @@ img {
     align-items: center;
     text-align: center;
 }
-.weatherContent h2{
+.weatherContent .title{
     position: relative;
     margin: 10px;
     /* bottom: 180px; */
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 3em;
     line-height: 0.78;
     /* text-align: left; */
     color: #4a4a4a;
@@ -151,13 +144,27 @@ img {
     margin: 20px;
 }
 
+#city{
+    width: 300px;
+    height:  30px;
+    border: #ffffff 2.5px solid;
+}
+
+#button{
+    width: 150px;
+    height: 40px;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 2px;
+}
+
 .container {
     visibility: hidden;
 }
 
 .destination h2{
     font-family: Montserrat;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 600;
     letter-spacing: 0.9px;
     color: #ff814f;
@@ -186,11 +193,59 @@ img {
 }
 
 main {
-     background-color: rgb(29, 29, 29);
-     grid-column: 1 / span 3;
+    background-color: rgb(29, 29, 29);
+    color:white;
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgb(253, 250, 209) 1px solid;
+}
+
+.resume li{
+    margin: 5px;
+}
+
+main ul, li{
+    display: list-item;
+    /* list-style-type: circle; */
+}
+
+main h1{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 25px;
+}
+
+.bullet {
+    /* background-color: red; */
+    margin: 15px;
+}
+
+.bullet li {
+    list-style-type: circle;
+}
+
+.cyan{
+    color: cadetblue;
+}
+
+.softYellow{
+    color: rgb(253, 250, 209);
 }
 
 footer {
-    background-color: rgb(139, 255, 139);
+    background-color: rgb(255, 255, 255);
     grid-column: 1 / span 3;
+}
+
+footer img{
+    width: 100px;
+    height: 100px;
+}
+
+.contact-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
