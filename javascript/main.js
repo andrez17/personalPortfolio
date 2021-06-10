@@ -65,7 +65,4 @@ const executeSearch = () => {
   
   $submit.click(executeSearch)
 
-  //Scroll to top
-  $(document).ready(function(){
-    $(this).scrollTop(0);
-});
+  
