@@ -120,7 +120,7 @@ img {
     height: 150px;
 }
 
-.weather{
+.weatherContent{
     background-color: rgb(253, 250, 209);
     grid-column: 1 / span 3;
     display: flex;
@@ -129,10 +129,10 @@ img {
     align-items: center;
     text-align: center;
 }
-.weather h2{
+.weatherContent h2{
     position: relative;
     margin: 10px;
-    bottom: 180px;
+    /* bottom: 180px; */
     font-family: Montserrat;
     font-size: 18px;
     line-height: 0.78;
@@ -140,29 +140,50 @@ img {
     color: #4a4a4a;
 }
 
-.weather .cityForm{
+.weatherContent .cityForm{
     position: relative;
     margin: 10px;
-    bottom: 180px;
+    /* bottom: 180px; */
 }
 
-.weather .container .sectiontitle h2{
+.weatherContent .container .sectiontitle h2{
     position: relative;
     margin: 20px;
 }
 
 .container {
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
-#destination {
+.destination h2{
     font-family: Montserrat;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 0.9px;
+    color: #ff814f;
+}
+
+.sectiontitle h2 {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 3.4px;
     text-align: left;
-    color: #27b7c1;
-  }
+    color: #4a4a4a;
+}
+
+#weather{
+    background-color: ghostwhite;
+    width: 200px;
+    height: 260px;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+#weather .weather{
+    margin: 0 auto;
+}
 
 main {
      background-color: rgb(29, 29, 29);
