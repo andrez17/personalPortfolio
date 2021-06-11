@@ -234,7 +234,7 @@ main h1{
 }
 
 .bullet li {
-    list-style-type: circle;
+    list-style-type: disc;
 }
 
 .cyan{
@@ -261,29 +261,87 @@ footer img{
     align-items: center;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 828px) {
     body {
         display: grid;
         height: 100vh;
-        grid-template: 10% 20% 140% 140% 220% 10% / repeat(3, 1fr);
-        /* grid-gap: 10px; */
+        grid-template: 10% 20% 70% 100% 190% 10% / repeat(3, 1fr);
     }
     .navbar h1{
         margin: 0 auto;
     }
     .navbar ul{
         display: none;
+
+    }
+
+    .side-video {
+        /* background: url("https://64.media.tumblr.com/40481948e7dc56fbe41bd71f29a11e5b/tumblr_oz757uefGs1whyvqho1_1280.jpg") no-repeat center center fixed; */
+        /* background-size: cover; */
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 2;
+        /* display: none; */
+    }
+
+    .banner {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .banner h2 {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
 
     .video-banner h1 {
+        /* display: none; */
+        font-size: 2.5em;
+    }
+
+    /* .video-banner h1 {
         writing-mode: vertical-rl;
         text-orientation: upright;
         letter-spacing: 1em;
         font-size: 5em;
         font-style: italic;
+    
+    
+    } */
+
+    section {
+        background-color: cadetblue;
+        grid-column: 2 / span 2;
+        grid-row: 3 / span 1;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .weatherContent .title{
+        position: relative;
+        margin: 10px;
+        /* bottom: 180px; */
+        font-family: Montserrat;
+        font-size: 2em;
+        line-height: 0.78;
+        /* text-align: left; */
+        color: #4a4a4a;
+    }
+
+    main ul, li{
+        display: list-item;
+        /* list-style-type: circle; */
+    }
+
 }
